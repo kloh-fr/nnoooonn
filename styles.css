@@ -1,0 +1,217 @@
+/* @author: Luc Poupard, http://www.kloh.fr
+   Sous licence MIT : http://opensource.org/licenses/MIT
+ */
+
+/*
+ * Reset et base générique
+   Librement inspiré par KNACSS et RÖCSSTI :
+   - KNACSS par Raphaël Goetter : http://www.knacss.com
+   - RÖCSSTI par Nicolas Hoffmann http://rocssti.nicolas-hoffmann.net
+ */
+html {
+	font-size: 62.5%; /* 62.5% correspond à 10 pixels et permet un calcul en em simplifié */
+}
+
+body {
+	font-size: 1.4em; /* 10 pixels x 1.4 = 14 pixels */
+	line-height: 1.5; /* Hauteur de ligne recommandée pour l'accessibilité */
+}
+
+p, ul, ol, dl, blockquote, pre, td, th, label, textarea {
+    font-size: 1em; /* 14px */
+    line-height: 1.5em;
+}
+
+/* HTML5 */
+article, aside, audio, canvas, datagrid, datalist, details, dialog, figure, footer, header, menu, nav, section, video {
+	display: block;
+}
+abbr, eventsource, mark, meter, time, progress, output, bb {
+	display: inline;
+}
+
+/* Titres
+   Dimensions calculées avec Vertical Rhythm Tool : http://soqr.fr/vertical-rhythm/
+ */
+h1, .h1 {
+  font-size: 1.8571em; /* 26px */
+  line-height: 1.6154em;
+  margin: 1.6154em 0 .8077em 0;
+}
+h2, .h2 {
+  font-size: 1.7143em; /* 24px */
+  line-height: 1.75em;
+  margin: 1.75em 0 .875em 0;
+}
+h3, .h3-like{
+    font-size:  1.2857em; /* 18px */
+    line-height:  1.1667em;
+    margin:  2em 0  1.1667em 0;
+}
+h4, .h4-like{
+    font-size:  1.2143em; /* 17px */
+    line-height:  1.2353em;
+    margin:  2.4706em 0  1.2353em 0;
+}
+h5, .h5-like{
+    font-size:  1.1429em; /* 16px */
+    line-height:  1.3125em;
+    margin:  2.625em 0  1.3125em 0;
+}
+h6, .h6-like{
+    font-size:  1.0714em; /* 15px */
+    line-height:  1.4em;
+    margin:  2.8em 0  1.4em 0;
+}
+
+/* Marges */
+html, body, blockquote, ul, ol, form {
+	margin: 0;
+	padding: 0;
+}
+
+p {margin: 0 0 1em 0;}
+ul, ol {padding-left: 2em;}
+
+/* Evite la fusion des marges avec le parent */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {margin-top: 0;}
+p:last-child, ul:last-child, ol:last-child, dl:last-child, blockquote:last-child, pre:last-child, table:last-child  {margin-bottom: 0;}
+
+
+li p, li ul, li ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Retour à la ligne dans les contenus */
+textarea, table, td, th, code, pre, samp, div {
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+
+/* Largeur maximale dans les contenus */
+img, table, td, blockquote, code, pre, textarea, input, video {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Images */
+img {
+	width: auto;
+	vertical-align: middle;
+}
+a img {border: 0;}
+
+/* Abréviations */
+abbr {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/*
+ * Propriétés génériques
+ */
+.center {text-align: center;}
+
+/*
+ * Structure
+ */
+body { padding-top: 2em;}
+
+#wrapper {
+  position: relative;
+  margin: auto;
+  width: 600px;
+}
+
+#message { position: relative;}
+
+#image {
+  position: relative;
+  margin: auto;
+  width: 550px;
+  height: 400px;
+  margin-top: -20px;
+}
+
+#vador {
+  position: absolute;
+  top: 0
+  left: 0;
+  width: 229px;
+  height: 340px;
+  background: url(vador.png) no-repeat;
+}
+#luke {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 302px;
+  height: 373px;
+  background: url(luke.png) no-repeat;
+  text-indent: -9999px;
+}
+
+/*
+ * Mise en forme
+ */
+body {
+  font-family: Arial, Verdana, sans-serif;
+  background: #ECECEC;
+}
+
+a, a:visited, a:active {
+  color: #000;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+#message a {color: #ef361a;}
+
+
+#message {
+  background: #FFFFFF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: #000000;
+  margin: 0;
+  padding: 25px 30px 35px 30px;
+}
+#message:before {
+  border-color: transparent #FFFFFF;
+  border-style: solid;
+  border-width: 0 0 30px 50px;
+  bottom: -30px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 220px;
+  width: 0;
+}
+#message:after {
+  border-color: transparent #ECECEC;
+  border-style: solid;
+  border-width: 0 0 30px 20px;
+  bottom: -30px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 220px;
+  width: 0;
+}
+
+#contexte, #archives {
+  margin-top: 2em;
+}
+
+footer {
+  margin-top: 5em;
+  text-align: center;
+  font-size: .8em;
+}
