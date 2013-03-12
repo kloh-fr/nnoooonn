@@ -182,6 +182,9 @@ a:hover, a:focus {
   color: #000000;
   margin: 0;
   padding: 25px 30px 35px 30px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.5em;
 }
 #message:before {
   border-color: transparent #FFFFFF;
